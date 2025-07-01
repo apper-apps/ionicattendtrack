@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
-import AddStudentModal from "@/components/molecules/AddStudentModal";
 import ApperIcon from "@/components/ApperIcon";
 import Button from "@/components/atoms/Button";
 import StatusPill from "@/components/atoms/StatusPill";
 import SearchInput from "@/components/atoms/SearchInput";
+import AddStudentModal from "@/components/molecules/AddStudentModal";
 import Error from "@/components/ui/Error";
 import Empty from "@/components/ui/Empty";
 import Loading from "@/components/ui/Loading";
 import { studentService } from "@/services/api/studentService";
 import { attendanceService } from "@/services/api/attendanceService";
-
 const StudentRoster = () => {
   const [students, setStudents] = useState([]);
   const [attendanceStats, setAttendanceStats] = useState({});
@@ -53,8 +52,8 @@ const StudentRoster = () => {
       await studentService.delete(studentId)
       setStudents(students.filter(s => s.Id !== studentId))
       toast.success('Student removed successfully')
-    } catch (err) {
-toast.error('Failed to remove student')
+} catch (err) {
+      toast.error('Failed to remove student')
       console.error('Error deleting student:', err)
     }
   }
@@ -266,12 +265,14 @@ icon="Trash2"
           }}
 />
       )} */}
-      {/* Add Student Modal */}
+{/* Add Student Modal */}
       <AddStudentModal
         isOpen={showAddModal}
         onClose={() => setShowAddModal(false)}
-        onStudentAdded={handleAddStudent}
+        onSubmit={handleAddStudent}
       />
     </div>
   )
 }
+
+export default StudentRoster
