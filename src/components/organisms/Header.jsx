@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { format } from 'date-fns'
+import { toast } from 'react-toastify'
 import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
-
+import AddStudentModal from '@/components/molecules/AddStudentModal'
 const Header = () => {
   const [selectedClass, setSelectedClass] = useState('Math 101 - Period 3')
+  const [showAddModal, setShowAddModal] = useState(false)
   
   const classes = [
     'Math 101 - Period 1',
@@ -14,6 +16,11 @@ const Header = () => {
     'Algebra II - Period 5'
   ]
   
+  const handleAddStudent = (newStudent) => {
+    toast.success('Student added successfully to the roster')
+    setShowAddModal(false)
+    // Note: In a real app, you might want to refresh data or update global state
+  }
   return (
     <div className="bg-white border-b border-gray-200 px-4 lg:px-6 py-4">
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
@@ -50,11 +57,22 @@ const Header = () => {
             </div>
           </div>
           
-          <Button icon="Plus" size="sm">
+<Button 
+            icon="Plus" 
+            size="sm"
+            onClick={() => setShowAddModal(true)}
+          >
             Add Student
           </Button>
         </div>
-      </div>
+</div>
+      
+      {/* Add Student Modal */}
+      <AddStudentModal
+        isOpen={showAddModal}
+        onClose={() => setShowAddModal(false)}
+        onSubmit={handleAddStudent}
+      />
     </div>
   )
 }
