@@ -12,7 +12,6 @@ import { studentService } from "@/services/api/studentService";
 import { attendanceService } from "@/services/api/attendanceService";
 
 const StudentRoster = () => {
-const StudentRoster = () => {
   const [students, setStudents] = useState([])
   const [attendanceStats, setAttendanceStats] = useState({})
   const [loading, setLoading] = useState(true)
@@ -237,7 +236,7 @@ icon="Trash2"
           </table>
         </div>
         
-        {filteredStudents.length === 0 && (
+{filteredStudents.length === 0 && (
           <div className="p-12">
             <Empty
               title="No students match your search"
@@ -245,8 +244,10 @@ icon="Trash2"
               icon="Search"
             />
           </div>
-)}
-{/* Student Detail Modal - Commented out until component is created */}
+        )}
+      </div>
+      
+      {/* Student Detail Modal - Commented out until component is created */}
       {/* {showDetailModal && selectedStudent && (
         <StudentDetailModal
           student={selectedStudent}
