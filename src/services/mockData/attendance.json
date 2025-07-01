@@ -1,0 +1,162 @@
+[
+  {
+    "Id": 1,
+    "studentId": 1,
+    "date": "2024-12-16",
+    "status": "present",
+    "checkInTime": "2024-12-16T08:15:00.000Z",
+    "note": ""
+  },
+  {
+    "Id": 2,
+    "studentId": 2,
+    "date": "2024-12-16",
+    "status": "present",
+    "checkInTime": "2024-12-16T08:20:00.000Z",
+    "note": ""
+  },
+  {
+    "Id": 3,
+    "studentId": 3,
+    "date": "2024-12-16",
+    "status": "absent",
+    "checkInTime": "",
+    "note": "Sick"
+  },
+  {
+    "Id": 4,
+    "studentId": 4,
+    "date": "2024-12-16",
+    "status": "present",
+    "checkInTime": "2024-12-16T08:10:00.000Z",
+    "note": ""
+  },
+  {
+    "Id": 5,
+    "studentId": 5,
+    "date": "2024-12-16",
+    "status": "tardy",
+    "checkInTime": "2024-12-16T08:35:00.000Z",
+    "note": "Bus delay"
+  },
+  {
+    "Id": 6,
+    "studentId": 6,
+    "date": "2024-12-16",
+    "status": "present",
+    "checkInTime": "2024-12-16T08:12:00.000Z",
+    "note": ""
+  },
+  {
+    "Id": 7,
+    "studentId": 7,
+    "date": "2024-12-16",
+    "status": "present",
+    "checkInTime": "2024-12-16T08:18:00.000Z",
+    "note": ""
+  },
+  {
+    "Id": 8,
+    "studentId": 8,
+    "date": "2024-12-16",
+    "status": "excused",
+    "checkInTime": "",
+    "note": "Doctor appointment"
+  },
+  {
+    "Id": 9,
+    "studentId": 9,
+    "date": "2024-12-16",
+    "status": "present",
+    "checkInTime": "2024-12-16T08:25:00.000Z",
+    "note": ""
+  },
+  {
+    "Id": 10,
+    "studentId": 10,
+    "date": "2024-12-16",
+    "status": "present",
+    "checkInTime": "2024-12-16T08:08:00.000Z",
+    "note": ""
+  },
+  {
+    "Id": 11,
+    "studentId": 11,
+    "date": "2024-12-16",
+    "status": "present",
+    "checkInTime": "2024-12-16T08:22:00.000Z",
+    "note": ""
+  },
+  {
+    "Id": 12,
+    "studentId": 12,
+    "date": "2024-12-16",
+    "status": "present",
+    "checkInTime": "2024-12-16T08:14:00.000Z",
+    "note": ""
+  },
+  {
+    "Id": 13,
+    "studentId": 13,
+    "date": "2024-12-16",
+    "status": "tardy",
+    "checkInTime": "2024-12-16T08:45:00.000Z",
+    "note": ""
+  },
+  {
+    "Id": 14,
+    "studentId": 14,
+    "date": "2024-12-16",
+    "status": "present",
+    "checkInTime": "2024-12-16T08:16:00.000Z",
+    "note": ""
+  },
+  {
+    "Id": 15,
+    "studentId": 15,
+    "date": "2024-12-16",
+    "status": "present",
+    "checkInTime": "2024-12-16T08:11:00.000Z",
+    "note": ""
+  },
+  {
+    "Id": 16,
+    "studentId": 16,
+    "date": "2024-12-16",
+    "status": "present",
+    "checkInTime": "2024-12-16T08:19:00.000Z",
+    "note": ""
+  },
+  {
+    "Id": 17,
+    "studentId": 17,
+    "date": "2024-12-16",
+    "status": "present",
+    "checkInTime": "2024-12-16T08:13:00.000Z",
+    "note": ""
+  },
+  {
+    "Id": 18,
+    "studentId": 18,
+    "date": "2024-12-16",
+    "status": "present",
+    "checkInTime": "2024-12-16T08:21:00.000Z",
+    "note": ""
+  },
+  {
+    "Id": 19,
+    "studentId": 19,
+    "date": "2024-12-16",
+    "status": "absent",
+    "checkInTime": "",
+    "note": ""
+  },
+  {
+    "Id": 20,
+    "studentId": 20,
+    "date": "2024-12-16",
+    "status": "present",
+    "checkInTime": "2024-12-16T08:17:00.000Z",
+    "note": ""
+  }
+]

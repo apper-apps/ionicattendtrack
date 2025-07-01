@@ -1,0 +1,162 @@
+[
+  {
+    "Id": 1,
+    "name": "Emma Wilson",
+    "email": "emma.wilson@school.edu",
+    "studentId": "STU001",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 2,
+    "name": "James Johnson",
+    "email": "james.johnson@school.edu",
+    "studentId": "STU002",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 3,
+    "name": "Sarah Davis",
+    "email": "sarah.davis@school.edu",
+    "studentId": "STU003",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 4,
+    "name": "Michael Brown",
+    "email": "michael.brown@school.edu",
+    "studentId": "STU004",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 5,
+    "name": "Jessica Garcia",
+    "email": "jessica.garcia@school.edu",
+    "studentId": "STU005",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 6,
+    "name": "David Martinez",
+    "email": "david.martinez@school.edu",
+    "studentId": "STU006",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 7,
+    "name": "Ashley Rodriguez",
+    "email": "ashley.rodriguez@school.edu",
+    "studentId": "STU007",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 8,
+    "name": "Christopher Lee",
+    "email": "christopher.lee@school.edu",
+    "studentId": "STU008",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 9,
+    "name": "Amanda Taylor",
+    "email": "amanda.taylor@school.edu",
+    "studentId": "STU009",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 10,
+    "name": "Ryan Anderson",
+    "email": "ryan.anderson@school.edu",
+    "studentId": "STU010",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 11,
+    "name": "Megan Thomas",
+    "email": "megan.thomas@school.edu",
+    "studentId": "STU011",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 12,
+    "name": "Joshua Jackson",
+    "email": "joshua.jackson@school.edu",
+    "studentId": "STU012",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 13,
+    "name": "Lauren White",
+    "email": "lauren.white@school.edu",
+    "studentId": "STU013",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 14,
+    "name": "Kevin Harris",
+    "email": "kevin.harris@school.edu",
+    "studentId": "STU014",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 15,
+    "name": "Nicole Clark",
+    "email": "nicole.clark@school.edu",
+    "studentId": "STU015",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 16,
+    "name": "Brandon Lewis",
+    "email": "brandon.lewis@school.edu",
+    "studentId": "STU016",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 17,
+    "name": "Stephanie Walker",
+    "email": "stephanie.walker@school.edu",
+    "studentId": "STU017",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 18,
+    "name": "Tyler Hall",
+    "email": "tyler.hall@school.edu",
+    "studentId": "STU018",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 19,
+    "name": "Rachel Allen",
+    "email": "rachel.allen@school.edu",
+    "studentId": "STU019",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  },
+  {
+    "Id": 20,
+    "name": "Justin Young",
+    "email": "justin.young@school.edu",
+    "studentId": "STU020",
+    "photoUrl": "",
+    "enrollmentDate": "2024-08-15T00:00:00.000Z"
+  }
+]
