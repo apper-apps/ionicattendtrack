@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
+import AddStudentModal from "@/components/molecules/AddStudentModal";
 import ApperIcon from "@/components/ApperIcon";
 import Button from "@/components/atoms/Button";
 import StatusPill from "@/components/atoms/StatusPill";
@@ -12,13 +13,14 @@ import { studentService } from "@/services/api/studentService";
 import { attendanceService } from "@/services/api/attendanceService";
 
 const StudentRoster = () => {
-  const [students, setStudents] = useState([])
-  const [attendanceStats, setAttendanceStats] = useState({})
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
-  const [searchTerm, setSearchTerm] = useState('')
-  const [showDetailModal, setShowDetailModal] = useState(false)
-  const [selectedStudent, setSelectedStudent] = useState(null)
+  const [students, setStudents] = useState([]);
+  const [attendanceStats, setAttendanceStats] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [showDetailModal, setShowDetailModal] = useState(false);
+  const [selectedStudent, setSelectedStudent] = useState(null);
+  const [showAddModal, setShowAddModal] = useState(false);
   
   const loadData = async () => {
     try {
@@ -52,11 +54,13 @@ const StudentRoster = () => {
       setStudents(students.filter(s => s.Id !== studentId))
       toast.success('Student removed successfully')
     } catch (err) {
-      toast.error('Failed to remove student')
+toast.error('Failed to remove student')
       console.error('Error deleting student:', err)
     }
   }
-  
+  const handleAddStudent = (newStudent) => {
+    setStudents(prev => [...prev, newStudent])
+  }
 const filteredStudents = students.filter(student =>
     student?.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
     student?.studentId?.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -105,11 +109,15 @@ const filteredStudents = students.filter(student =>
           <p className="text-gray-600 mt-1">Manage your class of {students.length} students</p>
         </div>
         
-        <div className="flex gap-3">
+<div className="flex gap-3">
           <Button variant="secondary" icon="Upload" size="sm">
             Import CSV
           </Button>
-          <Button icon="UserPlus" size="sm">
+          <Button 
+            icon="UserPlus" 
+            size="sm"
+            onClick={() => setShowAddModal(true)}
+          >
             Add Student
           </Button>
         </div>
@@ -256,10 +264,14 @@ icon="Trash2"
             setShowDetailModal(false)
             setSelectedStudent(null)
           }}
-        />
+/>
       )} */}
+      {/* Add Student Modal */}
+      <AddStudentModal
+        isOpen={showAddModal}
+        onClose={() => setShowAddModal(false)}
+        onStudentAdded={handleAddStudent}
+      />
     </div>
   )
 }
-
-export default StudentRoster
