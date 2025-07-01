@@ -1,5 +1,7 @@
-import mockAttendance from '@/services/mockData/attendance.json'
-import { format, subDays, startOfMonth, endOfMonth } from 'date-fns'
+import { endOfMonth, format, startOfMonth, subDays } from "date-fns";
+import React from "react";
+import Error from "@/components/ui/Error";
+import mockAttendance from "@/services/mockData/attendance.json";
 
 // Simulate API delay
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms))
@@ -169,10 +171,18 @@ class AttendanceService {
         name: 'At-Risk Students Alert',
         type: 'Alert Report',
         createdAt: subDays(new Date(), 14).toISOString(),
-        fileSize: '1.2 MB'
+fileSize: '1.2 MB'
       }
     ]
   }
+  async getStudentAttendance(studentId) {
+    await delay(300)
+    const studentRecords = this.attendance
+      .filter(record => record.studentId === parseInt(studentId))
+      .sort((a, b) => new Date(b.date) - new Date(a.date)) // Most recent first
+    
+return [...studentRecords]
+  }
 }
 
-export const attendanceService = new AttendanceService()
+export default new AttendanceService()

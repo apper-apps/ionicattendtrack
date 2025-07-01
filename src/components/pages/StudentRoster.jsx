@@ -1,22 +1,25 @@
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { toast } from 'react-toastify'
-import SearchInput from '@/components/atoms/SearchInput'
-import Button from '@/components/atoms/Button'
-import StatusPill from '@/components/atoms/StatusPill'
-import Loading from '@/components/ui/Loading'
-import Error from '@/components/ui/Error'
-import Empty from '@/components/ui/Empty'
-import ApperIcon from '@/components/ApperIcon'
-import { studentService } from '@/services/api/studentService'
-import { attendanceService } from '@/services/api/attendanceService'
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { toast } from "react-toastify";
+import ApperIcon from "@/components/ApperIcon";
+import Button from "@/components/atoms/Button";
+import StatusPill from "@/components/atoms/StatusPill";
+import SearchInput from "@/components/atoms/SearchInput";
+import Error from "@/components/ui/Error";
+import Empty from "@/components/ui/Empty";
+import Loading from "@/components/ui/Loading";
+import { studentService } from "@/services/api/studentService";
+import { attendanceService } from "@/services/api/attendanceService";
 
+const StudentRoster = () => {
 const StudentRoster = () => {
   const [students, setStudents] = useState([])
   const [attendanceStats, setAttendanceStats] = useState({})
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [searchTerm, setSearchTerm] = useState('')
+  const [showDetailModal, setShowDetailModal] = useState(false)
+  const [selectedStudent, setSelectedStudent] = useState(null)
   
   const loadData = async () => {
     try {
@@ -55,12 +58,11 @@ const StudentRoster = () => {
     }
   }
   
-  const filteredStudents = students.filter(student =>
-    student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    student.studentId.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    student.email.toLowerCase().includes(searchTerm.toLowerCase())
+const filteredStudents = students.filter(student =>
+    student?.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    student?.studentId?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    student?.email?.toLowerCase().includes(searchTerm.toLowerCase())
   )
-  
   const getStudentStatus = (studentId) => {
     const stats = attendanceStats[studentId]
     if (!stats) return 'unknown'
@@ -177,23 +179,23 @@ const StudentRoster = () => {
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="w-10 h-10 bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center">
-                          <span className="text-sm font-semibold text-primary-700">
-                            {student.name.split(' ').map(n => n[0]).join('')}
+<span className="text-sm font-semibold text-primary-700">
+                            {student?.name?.split(' ').map(n => n[0]).join('') || 'N/A'}
                           </span>
                         </div>
-                        <div className="ml-4">
-                          <div className="text-sm font-medium text-gray-900">{student.name}</div>
+<div className="ml-4">
+                          <div className="text-sm font-medium text-gray-900">{student?.name || 'N/A'}</div>
                           <div className="text-sm text-gray-500">
-                            Enrolled {new Date(student.enrollmentDate).toLocaleDateString()}
+                            Enrolled {student?.enrollmentDate ? new Date(student.enrollmentDate).toLocaleDateString() : 'N/A'}
                           </div>
                         </div>
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">{student.studentId}</div>
+                      <div className="text-sm text-gray-900">{student?.studentId || 'N/A'}</div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-600">{student.email}</div>
+<td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm text-gray-600">{student?.email || 'N/A'}</div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center gap-3">
@@ -222,9 +224,9 @@ const StudentRoster = () => {
                         <Button
                           variant="ghost"
                           size="sm"
-                          icon="Trash2"
+icon="Trash2"
                           className="text-red-600 hover:text-red-700"
-                          onClick={() => handleDeleteStudent(student.Id)}
+                          onClick={() => handleDeleteStudent(student?.Id)}
                         />
                       </div>
                     </td>
@@ -243,8 +245,18 @@ const StudentRoster = () => {
               icon="Search"
             />
           </div>
-        )}
-      </div>
+)}
+{/* Student Detail Modal - Commented out until component is created */}
+      {/* {showDetailModal && selectedStudent && (
+        <StudentDetailModal
+          student={selectedStudent}
+          isOpen={showDetailModal}
+          onClose={() => {
+            setShowDetailModal(false)
+            setSelectedStudent(null)
+          }}
+        />
+      )} */}
     </div>
   )
 }
