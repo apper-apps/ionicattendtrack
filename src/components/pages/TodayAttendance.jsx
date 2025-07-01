@@ -9,7 +9,7 @@ import Loading from '@/components/ui/Loading'
 import Error from '@/components/ui/Error'
 import Empty from '@/components/ui/Empty'
 import { studentService } from '@/services/api/studentService'
-import { attendanceService } from '@/services/api/attendanceService'
+import attendanceService from '@/services/api/attendanceService'
 
 const TodayAttendance = () => {
   const [students, setStudents] = useState([])

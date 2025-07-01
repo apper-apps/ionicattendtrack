@@ -1,11 +1,8 @@
-import { endOfMonth, format, startOfMonth, subDays } from "date-fns";
-import React from "react";
-import Error from "@/components/ui/Error";
-import mockAttendance from "@/services/mockData/attendance.json";
+import { endOfMonth, format, startOfMonth, subDays } from 'date-fns'
+import mockAttendance from '@/services/mockData/attendance.json'
 
-// Simulate API delay
+// Simple delay function for simulating API calls
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms))
-
 class AttendanceService {
   constructor() {
     this.attendance = [...mockAttendance]
