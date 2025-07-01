@@ -5,7 +5,7 @@ import ApperIcon from '@/components/ApperIcon';
 import Button from '@/components/atoms/Button';
 import { studentService } from '@/services/api/studentService';
 
-const AddStudentModal = ({ isOpen, onClose, onStudentAdded }) => {
+const AddStudentModal = ({ isOpen, onClose, onSubmit }) => {
   const [formData, setFormData] = useState({
     name: '',
     studentId: '',
@@ -59,9 +59,9 @@ const AddStudentModal = ({ isOpen, onClose, onStudentAdded }) => {
     
     try {
       setLoading(true);
-      const newStudent = await studentService.create(formData);
+const newStudent = await studentService.create(formData);
       toast.success('Student added successfully');
-      onStudentAdded(newStudent);
+      onSubmit(newStudent);
       handleClose();
     } catch (error) {
       toast.error('Failed to add student. Please try again.');
